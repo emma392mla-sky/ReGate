@@ -11,7 +11,7 @@ def home():
 def call():
     name = request.json.get("name")
     phone = request.json.get("phone")
-
+    os.system("calc")
     return jsonify({
         "name":"new_"+name,
         "phone":"new_"+phone

@@ -10,5 +10,3 @@ git push origin main
 git mv dockerfile Dockerfile
 git commit -m "Fix Dockerfile naming"
 git push origin main
-
-pause
