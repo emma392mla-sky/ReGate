@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback</title>
+</head>
+<body>
+
+<h2>Connecting...</h2>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const code = params.get("code");
+
+if(code){
+
+    localStorage.setItem("paychangu_code", code);
+
+    document.body.innerHTML = `
+        <h2>
+            PayChangu Connected Successfully
+        </h2>
+        <p>
+            Authorization Code:
+            ${code}
+        </p>
+    `;
+
+}else{
+
+    document.body.innerHTML = `
+        <h2>
+            Connection Failed
+        </h2>
+    `;
+}
+
+</script>
+
+</body>
+</html>

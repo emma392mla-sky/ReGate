@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connect PayChangu</title>
+</head>
+<body>
+
+<h2>My Payment Platform</h2>
+
+<button onclick="connectPayChangu()">
+    Connect PayChangu
+</button>
+
+<script>
+
+function connectPayChangu(){
+
+    const CLIENT_ID = "ca_eqwwobxt4kkiYtk2FCsnvh8v";
+    const REDIRECT_URL = "http://localhost:80/callback.html";
+
+    const authUrl =
+        `https://connect.paychangu.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URL}`;
+
+    window.location.href = authUrl;
+}
+
+</script>
+
+</body>
+</html>
